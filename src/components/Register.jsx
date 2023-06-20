@@ -1,4 +1,4 @@
-
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@material-ui/core';
 import { auth, createUserWithEmailAndPassword } from '../firebase';
@@ -7,11 +7,12 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+  const navigate = useNavigate(); 
+  
   const handleRegister = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      // Registro exitoso, realizar las acciones necesarias
+      navigate('/login'); 
     } catch (error) {
       setErrorMessage(error.message);
     }

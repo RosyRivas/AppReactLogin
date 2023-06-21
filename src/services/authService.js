@@ -1,6 +1,4 @@
-export const login = (username, password) => {
-    // Lógica de autenticación
-  
+export const login = (username, password) => {  
     const user = { username, password };
     localStorage.setItem('user', JSON.stringify(user));
   };

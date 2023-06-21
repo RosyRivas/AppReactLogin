@@ -21,16 +21,13 @@ export default function Login() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-
     // validate the inputs
     if (!email || !password) {
       setError("Porfavor introduzca su nombre de usuario y contraseña.");
       return;
     }
-
     // clear the errors
     setError("");
-
     try {
       let loginResponse = await signInUser(email, password);
       startSession(loginResponse.user);

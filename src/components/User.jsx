@@ -28,13 +28,10 @@ export default function User() {
   return (
     <Container maxWidth="xs" sx={{mt: 2}}>
       <Typography variant="h6" component="h1" textAlign="center" gutterBottom>
-        You're logged in as:
+        Bienvenido a su session:
       </Typography>
       <Typography variant="h5" component="h1" textAlign="center" gutterBottom>
         {email}
-      </Typography>
-      <Typography variant="p" component="p" textAlign="center" gutterBottom>
-        Check the console for your (access/session) token.
       </Typography>
       <Button variant="contained" color="error" onClick={onLogout} sx={{mt: 3}} fullWidth>
         Log out

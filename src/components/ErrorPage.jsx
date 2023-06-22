@@ -9,10 +9,10 @@ export default function ErrorPage() {
   return (
     <Container maxWidth="xs" sx={{mt: 2}}>
       <Typography variant="h5" component="h1" gutterBottom>
-        Oops!
+        disculpe
       </Typography>
       <Typography variant="p" component="p" gutterBottom>
-        Sorry, an unexpected error has occurred.
+       se a detectado un error
       </Typography>
       <Typography variant="p" component="p" gutterBottom>
         <i>{error.statusText || error.message}</i>
